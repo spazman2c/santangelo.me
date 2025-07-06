@@ -103,7 +103,15 @@ export default function Home() {
 
       {/* My Work Section */}
       <section className="relative z-10 w-full px-6 max-w-5xl mx-auto fade-in opacity-0">
-        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">My Work</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">My Work</h2>
+          <a
+            href="/work"
+            className="inline-block px-4 py-2 text-sm font-medium text-indigo-400 bg-white/10 border border-indigo-400 rounded-lg hover:bg-indigo-500 hover:text-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
+          >
+            See More
+          </a>
+        </div>
         <p className="text-white/80 leading-7 mb-8">
           A curated collection of websites I've designed & developed.
         </p>
