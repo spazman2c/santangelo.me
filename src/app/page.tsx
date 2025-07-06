@@ -42,7 +42,7 @@ export default function Home() {
             Christopher Santangelo
           </h1>
           <p className="text-white/80 text-center max-w-md mb-6">
-            Crafting elegant solutions through code, design, and innovation.
+            Delivering expert technical support and solutions.
           </p>
 
           {/* Contact Links */}
