@@ -29,9 +29,13 @@ export default function Home() {
       <section className="relative z-10 pt-24 pb-16 w-full px-6 max-w-3xl mx-auto flex flex-col items-center fade-in opacity-0">
         <div className="w-full backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl shadow-lg ring-1 ring-white/10 px-8 py-12 flex flex-col items-center">
           <img 
-            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" 
+            src="/profile.jpg" 
             alt="Christopher Santangelo portrait" 
             className="w-32 h-32 rounded-full ring-2 ring-white/20 mb-6 object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80';
+            }}
           />
 
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-2 text-center">
@@ -44,23 +48,27 @@ export default function Home() {
           {/* Contact Links */}
           <div className="flex gap-6">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/chrissantangelo96/" 
               aria-label="LinkedIn" 
               className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin className="w-6 h-6 stroke-[1.75] text-blue-400 group-hover:text-white transition" />
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/spazman2c" 
               aria-label="GitHub" 
               className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github className="w-6 h-6 stroke-[1.75] text-white group-hover:text-purple-400 transition" />
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="mailto:you@example.com" 
+              href="mailto:Cjsantangelo96@gmail.com" 
               aria-label="Email" 
               className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
             >
@@ -80,9 +88,11 @@ export default function Home() {
       <section className="relative z-10 w-full px-6 max-w-3xl mx-auto fade-in opacity-0">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">About Me</h2>
         <p className="text-white/80 leading-7">
-          I'm a passionate software engineer with a love for creating impactful digital experiences.
-          My expertise spans full-stack development, DevOps, and UI/UX design. When I'm not building, 
-          you'll find me mentoring budding developers or exploring the latest in tech.
+          I'm a Technical Support Engineer by day and a passionate developer by night. I specialize in 
+          troubleshooting complex technical issues and providing exceptional customer support, while 
+          channeling my creativity into building innovative web applications and digital solutions. 
+          My diverse skill set bridges the gap between technical problem-solving and creative development, 
+          allowing me to approach challenges from both support and engineering perspectives.
         </p>
       </section>
 
@@ -99,22 +109,26 @@ export default function Home() {
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Project 1 */}
+          {/* Standfinder */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
-              alt="Modern Portfolio screenshot" 
-              className="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-            />
+            <div className="w-full h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🌾</div>
+                <div className="text-white font-bold text-xl">Standfinder</div>
+                <div className="text-green-100 text-sm">Farm Stand Directory</div>
+              </div>
+            </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">Modern Portfolio</h3>
-                <p className="text-white/70 text-sm mt-1">A sleek personal portfolio showcasing interactive animations and dark-mode support.</p>
+                <h3 className="text-lg font-medium tracking-tight">Standfinder</h3>
+                <p className="text-white/70 text-sm mt-1">A comprehensive platform connecting local farmers with consumers through an interactive farm stand directory and mapping system.</p>
               </header>
               <div className="mt-auto">
                 <a 
-                  href="#" 
+                  href="https://farmstandlisting.com/" 
                   className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Visit Site
                   <ArrowUpRight className="w-4 h-4 stroke-[2]" />
@@ -123,22 +137,26 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Project 2 */}
+          {/* Tikkit */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=800&q=80" 
-              alt="E-Commerce Platform screenshot" 
-              className="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-            />
+            <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🎫</div>
+                <div className="text-white font-bold text-xl">Tikkit</div>
+                <div className="text-blue-100 text-sm">Support Desk</div>
+              </div>
+            </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">E-Commerce Platform</h3>
-                <p className="text-white/70 text-sm mt-1">Full-stack storefront featuring secure authentication, cart, and order management.</p>
+                <h3 className="text-lg font-medium tracking-tight">Tikkit</h3>
+                <p className="text-white/70 text-sm mt-1">A modern support desk and ticketing system designed to streamline customer service operations and improve response times.</p>
               </header>
               <div className="mt-auto">
                 <a 
-                  href="#" 
+                  href="https://tikkitdesk.com/" 
                   className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Visit Site
                   <ArrowUpRight className="w-4 h-4 stroke-[2]" />
@@ -147,22 +165,26 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Project 3 */}
+          {/* FridgeChef */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1544716278-fa03830d81d7?auto=format&fit=crop&w=800&q=80" 
-              alt="Tech Blog screenshot" 
-              className="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-            />
+            <div className="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">👨‍🍳</div>
+                <div className="text-white font-bold text-xl">FridgeChef</div>
+                <div className="text-orange-100 text-sm">Recipe Generator</div>
+              </div>
+            </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">Tech Insights Blog</h3>
-                <p className="text-white/70 text-sm mt-1">Content-rich blog with CMS integration, optimized for accessibility and SEO.</p>
+                <h3 className="text-lg font-medium tracking-tight">FridgeChef</h3>
+                <p className="text-white/70 text-sm mt-1">An intelligent recipe generator that creates personalized meal suggestions based on available ingredients, helping reduce food waste.</p>
               </header>
               <div className="mt-auto">
                 <a 
-                  href="#" 
+                  href="https://app--fridge-chef-d6b7b34d.base44.app/" 
                   className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Visit Site
                   <ArrowUpRight className="w-4 h-4 stroke-[2]" />
