@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Linkedin, Github, Mail, ArrowUpRight } from 'lucide-react'
 
 export default function Home() {
+  const [showAllSkills, setShowAllSkills] = useState(false);
   useEffect(() => {
     // Fade-in sequence
     const fadeElements = document.querySelectorAll('.fade-in')
@@ -87,13 +88,56 @@ export default function Home() {
       {/* About Section */}
       <section className="relative z-10 w-full px-6 max-w-3xl mx-auto fade-in opacity-0">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4">About Me</h2>
-        <p className="text-white/80 leading-7">
-          I'm a Technical Support Engineer by day and a passionate developer by night. I specialize in 
-          troubleshooting complex technical issues and providing exceptional customer support, while 
-          channeling my creativity into building innovative web applications and digital solutions. 
-          My diverse skill set bridges the gap between technical problem-solving and creative development, 
-          allowing me to approach challenges from both support and engineering perspectives.
+        <p className="text-white/80 leading-7 mb-4">
+          Technical support professional with over four years of experience in resolving technical issues and enhancing customer satisfaction. Expert in managing support interactions, collaborating with cross-functional teams, and driving process improvements. Recognized for resolving high volumes of live chats monthly with a 90%+ customer satisfaction rate and for improving response times through effective teamwork.
         </p>
+        <ul className="list-disc list-inside text-white/70 leading-7 mb-2">
+          <li>Skilled in troubleshooting complex technical issues and providing exceptional customer support.</li>
+          <li>Experienced in conducting customer trainings and creating step-by-step workflows.</li>
+          <li>Proven ability to reduce escalations and improve support metrics through collaboration and innovation.</li>
+        </ul>
+      </section>
+
+      {/* Skills Section */}
+      <section className="relative z-10 w-full px-6 max-w-3xl mx-auto fade-in opacity-0 mt-8 mb-8">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-4 flex items-center">Skills
+          <button
+            onClick={() => setShowAllSkills((prev) => !prev)}
+            className="ml-4 px-3 py-1 text-xs font-medium rounded transition-all duration-300 border border-indigo-400 bg-white/10 text-indigo-300 hover:bg-indigo-500 hover:text-white hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+            aria-expanded={showAllSkills}
+          >
+            {showAllSkills ? 'See Less' : 'See More'}
+          </button>
+        </h2>
+        {(() => {
+          const skills = [
+            'Okta', 'Microsoft 365', 'Google Workspace', 'OneLogin', 'AWS', 'GCP', 'Azure', 'GitHub',
+            'GitLab', 'Azure DevOps', 'Intune', 'Jamf', 'Kandji', 'Hexnode', 'Rippling', 'JumpCloud',
+            'Mac', 'Windows', 'Linux', 'Jira', 'PCI DSS', 'CRM Systems', 'Datadog', 'PCI', 'Merge.dev',
+            'Gusto', 'Workday', 'ISO 27001', 'Paylocity', 'Checker', 'Certn', 'HIPAA', 'Support Operations',
+            'AI', 'Machine Learning', 'LangChain', 'OpenAI API', 'Web Development', 'JavaScript', 'TypeScript',
+            'React', 'Next.js', 'Vercel', 'Tailwind CSS', 'Node.js', 'Express'
+          ];
+          const keySkills = [
+            'AI', 'React', 'Next.js', 'Web Development', 'JavaScript', 'TypeScript', 'AWS', 'Azure',
+            'Tailwind CSS', 'Node.js'
+          ];
+          const displaySkills = showAllSkills ? skills : keySkills;
+          return (
+            <div
+              className={`flex flex-wrap gap-2 text-white/90 transition-all duration-500 ${showAllSkills ? 'max-h-[1000px]' : 'max-h-24 overflow-hidden'}`}
+            >
+              {displaySkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="bg-white/10 border border-white/20 rounded px-3 py-1 text-sm transition-all duration-300 transform hover:scale-110 hover:bg-indigo-500/80 hover:text-white hover:shadow-lg hover:border-indigo-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          );
+        })()}
       </section>
 
       {/* Divider */}
@@ -173,31 +217,20 @@ export default function Home() {
             </div>
           </article>
 
-          {/* FridgeChef */}
+          {/* AppSyndiq */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg">
-            <div className="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+            <div className="w-full h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-4xl mb-2">👨‍🍳</div>
-                <div className="text-white font-bold text-xl">FridgeChef</div>
-                <div className="text-orange-100 text-sm">Recipe Generator</div>
+                <div className="text-4xl mb-2">📱</div>
+                <div className="text-white font-bold text-xl">AppSyndiq</div>
+                <div className="text-indigo-100 text-sm">Mobile App Platform</div>
               </div>
             </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">FridgeChef</h3>
-                <p className="text-white/70 text-sm mt-1">An intelligent recipe generator that creates personalized meal suggestions based on available ingredients, helping reduce food waste.</p>
+                <h3 className="text-lg font-medium tracking-tight">AppSyndiq</h3>
+                <p className="text-white/70 text-sm mt-1">A revolutionary mobile app platform designed to streamline app distribution and discovery. Coming soon to appsyndiq.com!</p>
               </header>
-              <div className="mt-auto">
-                <a 
-                  href="https://app--fridge-chef-d6b7b34d.base44.app/" 
-                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
-                </a>
-              </div>
             </div>
           </article>
         </div>

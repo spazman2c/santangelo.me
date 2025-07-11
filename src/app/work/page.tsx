@@ -70,6 +70,23 @@ export default function Work() {
             </div>
           </article>
 
+          {/* AppSyndiq */}
+          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="w-full h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">📱</div>
+                <div className="text-white font-bold text-xl">AppSyndiq</div>
+                <div className="text-indigo-100 text-sm">Mobile App Platform</div>
+              </div>
+            </div>
+            <div className="p-6 flex flex-col gap-4">
+              <header>
+                <h3 className="text-lg font-medium tracking-tight">AppSyndiq</h3>
+                <p className="text-white/70 text-sm mt-1">A revolutionary mobile app platform designed to streamline app distribution and discovery. Coming soon to appsyndiq.com!</p>
+              </header>
+            </div>
+          </article>
+
           {/* FridgeChef */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
@@ -95,23 +112,6 @@ export default function Work() {
                   <ArrowUpRight className="w-4 h-4 stroke-[2]" />
                 </a>
               </div>
-            </div>
-          </article>
-
-          {/* Coming Soon 1 */}
-          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="w-full h-48 bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">🚧</div>
-                <div className="text-white font-bold text-xl">Coming Soon</div>
-                <div className="text-gray-100 text-sm">New Project</div>
-              </div>
-            </div>
-            <div className="p-6 flex flex-col gap-4">
-              <header>
-                <h3 className="text-lg font-medium tracking-tight">Coming Soon</h3>
-                <p className="text-white/70 text-sm mt-1">Stay tuned for more exciting projects and updates!</p>
-              </header>
             </div>
           </article>
 
