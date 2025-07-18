@@ -217,20 +217,31 @@ export default function Home() {
             </div>
           </article>
 
-          {/* AppSyndiq */}
+          {/* Frameriq */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg">
-            <div className="w-full h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div className="w-full h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-4xl mb-2">📱</div>
-                <div className="text-white font-bold text-xl">AppSyndiq</div>
-                <div className="text-indigo-100 text-sm">Mobile App Platform</div>
+                <div className="text-4xl mb-2">🖼️</div>
+                <div className="text-white font-bold text-xl">Frameriq</div>
+                <div className="text-teal-100 text-sm">Frame Generator</div>
               </div>
             </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">AppSyndiq</h3>
-                <p className="text-white/70 text-sm mt-1">A revolutionary mobile app platform designed to streamline app distribution and discovery. Coming soon to appsyndiq.com!</p>
+                <h3 className="text-lg font-medium tracking-tight">Frameriq</h3>
+                <p className="text-white/70 text-sm mt-1">An innovative platform for creating and customizing frames with advanced design tools and seamless user experience.</p>
               </header>
+              <div className="mt-auto">
+                <a 
+                  href="https://frameriq.com/" 
+                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
+                </a>
+              </div>
             </div>
           </article>
         </div>

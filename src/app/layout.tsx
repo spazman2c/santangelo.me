@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Christopher Santangelo – Personal Brand',
   description: 'Delivering expert technical support and solutions.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
