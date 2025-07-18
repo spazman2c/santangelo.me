@@ -115,20 +115,115 @@ export default function Work() {
             </div>
           </article>
 
-          {/* Coming Soon 2 */}
+          {/* Frameriq */}
           <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center">
+            <div className="w-full h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-4xl mb-2">✨</div>
-                <div className="text-white font-bold text-xl">Coming Soon</div>
-                <div className="text-purple-100 text-sm">New Project</div>
+                <div className="text-4xl mb-2">🖼️</div>
+                <div className="text-white font-bold text-xl">Frameriq</div>
+                <div className="text-teal-100 text-sm">Frame Generator</div>
               </div>
             </div>
             <div className="p-6 flex flex-col gap-4">
               <header>
-                <h3 className="text-lg font-medium tracking-tight">Coming Soon</h3>
-                <p className="text-white/70 text-sm mt-1">Stay tuned for more exciting projects and updates!</p>
+                <h3 className="text-lg font-medium tracking-tight">Frameriq</h3>
+                <p className="text-white/70 text-sm mt-1">An innovative platform for creating and customizing frames with advanced design tools and seamless user experience.</p>
               </header>
+              <div className="mt-auto">
+                <a 
+                  href="https://frameriq.com/" 
+                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* Genimotion */}
+          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="w-full h-48 bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🎬</div>
+                <div className="text-white font-bold text-xl">Genimotion</div>
+                <div className="text-emerald-100 text-sm">Motion Generator</div>
+              </div>
+            </div>
+            <div className="p-6 flex flex-col gap-4">
+              <header>
+                <h3 className="text-lg font-medium tracking-tight">Genimotion</h3>
+                <p className="text-white/70 text-sm mt-1">A cutting-edge platform for generating dynamic motion graphics and animations with AI-powered tools.</p>
+              </header>
+              <div className="mt-auto">
+                <a 
+                  href="https://genimotion.dev/" 
+                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* SwiftApply */}
+          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="w-full h-48 bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">⚡</div>
+                <div className="text-white font-bold text-xl">SwiftApply</div>
+                <div className="text-violet-100 text-sm">Job Application Tool</div>
+              </div>
+            </div>
+            <div className="p-6 flex flex-col gap-4">
+              <header>
+                <h3 className="text-lg font-medium tracking-tight">SwiftApply</h3>
+                <p className="text-white/70 text-sm mt-1">Streamlined job application platform that simplifies the hiring process with intelligent automation and tracking.</p>
+              </header>
+              <div className="mt-auto">
+                <a 
+                  href="https://swiftapply.app/" 
+                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
+                </a>
+              </div>
+            </div>
+          </article>
+
+          {/* WillTheyHireMe */}
+          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="w-full h-48 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl mb-2">🔮</div>
+                <div className="text-white font-bold text-xl">WillTheyHireMe</div>
+                <div className="text-rose-100 text-sm">Hiring Predictor</div>
+              </div>
+            </div>
+            <div className="p-6 flex flex-col gap-4">
+              <header>
+                <h3 className="text-lg font-medium tracking-tight">WillTheyHireMe</h3>
+                <p className="text-white/70 text-sm mt-1">An AI-powered platform that analyzes job applications and predicts hiring outcomes with advanced algorithms.</p>
+              </header>
+              <div className="mt-auto">
+                <a 
+                  href="https://willtheyhireme.com/" 
+                  className="inline-flex items-center gap-1 text-indigo-400 hover:text-white font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
+                </a>
+              </div>
             </div>
           </article>
 
