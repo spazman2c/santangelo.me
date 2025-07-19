@@ -20,93 +20,84 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen font-[Inter] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-
+    <div className="min-h-screen font-[Inter] bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="relative z-10 pt-20 pb-16 w-full px-6 max-w-4xl mx-auto flex flex-col items-center fade-in opacity-0">
-        <div className="w-full backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl shadow-2xl ring-1 ring-white/5 px-10 py-16 flex flex-col items-center">
-          <div className="relative mb-8">
+      <section className="pt-16 pb-8 w-full px-6 max-w-6xl mx-auto fade-in opacity-0">
+        <div className="flex flex-col items-center text-center mb-12">
+          <div className="relative mb-6">
             <img 
               src="/profile.jpg" 
               alt="Christopher Santangelo portrait" 
-              className="w-36 h-36 rounded-full ring-4 ring-white/20 object-cover shadow-2xl"
+              className="w-24 h-24 rounded-full ring-2 ring-gray-200 object-cover"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80';
               }}
             />
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-3 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold tracking-tight mb-2 text-gray-900">
             Christopher Santangelo
           </h1>
-          <p className="text-gray-300 text-lg text-center max-w-lg mb-8 leading-relaxed">
+          <p className="text-gray-600 text-lg mb-6">
             Technical Support Engineer & Developer
           </p>
 
           {/* Contact Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <a 
               href="https://www.linkedin.com/in/chrissantangelo96/" 
               aria-label="LinkedIn" 
-              className="relative group p-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 hover:border-white/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+              className="p-2 bg-gray-100 border border-gray-200 rounded-lg hover:bg-gray-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="w-5 h-5 stroke-[1.75] text-blue-400 group-hover:text-white transition" />
-              <span className="sr-only">LinkedIn</span>
+              <Linkedin className="w-4 h-4 text-blue-600" />
             </a>
             <a 
               href="https://github.com/spazman2c" 
               aria-label="GitHub" 
-              className="relative group p-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 hover:border-white/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+              className="p-2 bg-gray-100 border border-gray-200 rounded-lg hover:bg-gray-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 stroke-[1.75] text-white group-hover:text-purple-400 transition" />
-              <span className="sr-only">GitHub</span>
+              <Github className="w-4 h-4 text-gray-700" />
             </a>
             <a 
               href="mailto:Cjsantangelo96@gmail.com" 
               aria-label="Email" 
-              className="relative group p-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 hover:border-white/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+              className="p-2 bg-gray-100 border border-gray-200 rounded-lg hover:bg-gray-200 transition-colors"
             >
-              <Mail className="w-5 h-5 stroke-[1.75] text-teal-400 group-hover:text-white transition" />
-              <span className="sr-only">Email</span>
+              <Mail className="w-4 h-4 text-gray-600" />
             </a>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="relative z-10 w-full px-6 max-w-4xl mx-auto fade-in opacity-0 mt-16">
-        <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl shadow-2xl ring-1 ring-white/5 p-10">
-          <h2 className="text-3xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">About Me</h2>
-          <p className="text-gray-300 leading-8 text-lg mb-6">
-            Technical support professional with over four years of experience in resolving technical issues and enhancing customer satisfaction. Expert in managing support interactions, collaborating with cross-functional teams, and driving process improvements. Recognized for resolving high volumes of live chats monthly with a 90%+ customer satisfaction rate and for improving response times through effective teamwork.
+      <section className="w-full px-6 max-w-4xl mx-auto fade-in opacity-0 mb-12">
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+          <h2 className="text-xl font-bold mb-3 text-gray-900">About</h2>
+          <p className="text-gray-700 text-sm leading-relaxed mb-3">
+            Technical support professional with over four years of experience in resolving technical issues and enhancing customer satisfaction. Expert in managing support interactions, collaborating with cross-functional teams, and driving process improvements.
           </p>
-          <ul className="list-disc list-inside text-gray-300 leading-7 text-lg space-y-2">
-            <li>Skilled in troubleshooting complex technical issues and providing exceptional customer support.</li>
-            <li>Experienced in conducting customer trainings and creating step-by-step workflows.</li>
-            <li>Proven ability to reduce escalations and improve support metrics through collaboration and innovation.</li>
-          </ul>
+          <div className="text-sm text-gray-600">
+            <span className="font-medium">Key achievements:</span> 90%+ customer satisfaction rate, 25% response time improvement, 40% escalation reduction.
+          </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="relative z-10 w-full px-6 max-w-4xl mx-auto fade-in opacity-0 mt-16">
-        <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl shadow-2xl ring-1 ring-white/5 p-10">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Skills</h2>
+      <section className="w-full px-6 max-w-4xl mx-auto fade-in opacity-0 mb-12">
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold text-gray-900">Skills</h2>
             <button
               onClick={() => setShowAllSkills((prev) => !prev)}
-              className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 border border-blue-500/50 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20 hover:text-white hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-              aria-expanded={showAllSkills}
+              className="text-xs px-3 py-1 border border-gray-300 bg-white rounded-md hover:bg-gray-50 transition-colors"
             >
               {showAllSkills ? 'Show Less' : 'Show More'}
             </button>
@@ -127,12 +118,12 @@ export default function Home() {
             const displaySkills = showAllSkills ? skills : keySkills;
             return (
               <div
-                className={`flex flex-wrap gap-3 text-gray-300 transition-all duration-500 ${showAllSkills ? 'max-h-[1000px]' : 'max-h-32 overflow-hidden'}`}
+                className={`flex flex-wrap gap-2 text-gray-700 transition-all duration-500 ${showAllSkills ? 'max-h-[1000px]' : 'max-h-20 overflow-hidden'}`}
               >
                 {displaySkills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm transition-all duration-300 transform hover:scale-105 hover:bg-blue-500/20 hover:text-white hover:border-blue-400/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    className="bg-white border border-gray-200 rounded-md px-3 py-1 text-xs transition-all duration-300 hover:bg-gray-50 hover:border-gray-300"
                   >
                     {skill}
                   </span>
@@ -143,110 +134,177 @@ export default function Home() {
         </div>
       </section>
 
-      {/* My Work Section */}
-      <section className="relative z-10 w-full px-6 max-w-6xl mx-auto fade-in opacity-0 mt-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Featured Work</h2>
-          <a
-            href="/work"
-            className="inline-block px-6 py-3 text-sm font-medium text-blue-300 bg-blue-500/10 border border-blue-500/50 rounded-lg hover:bg-blue-500/20 hover:text-white transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-          >
-            View All Projects
-          </a>
-        </div>
-        <p className="text-gray-300 text-lg leading-relaxed mb-12 max-w-3xl">
-          A curated collection of websites and applications I've designed & developed.
-        </p>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Projects Section */}
+      <section className="w-full px-6 max-w-6xl mx-auto fade-in opacity-0 mb-12">
+        <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Projects</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Standfinder */}
-          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/5 transform transition duration-300 hover:scale-105 hover:shadow-3xl">
-            <div className="w-full h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-5xl mb-3">🌾</div>
-                <div className="text-white font-bold text-2xl">Standfinder</div>
-                <div className="text-green-100 text-sm">Farm Stand Directory</div>
+                <div className="text-3xl mb-1">🌾</div>
+                <div className="text-white font-bold text-sm">Standfinder</div>
               </div>
             </div>
-            <div className="p-8 flex flex-col gap-4">
-              <header>
-                <h3 className="text-xl font-semibold tracking-tight mb-3">Standfinder</h3>
-                <p className="text-gray-300 text-base leading-relaxed">A comprehensive platform connecting local farmers with consumers through an interactive farm stand directory and mapping system.</p>
-              </header>
-              <div className="mt-auto">
-                <a 
-                  href="https://farmstandlisting.com/" 
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 rounded"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
-                </a>
-              </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">Standfinder</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">Farm stand directory connecting local farmers with consumers.</p>
+              <a 
+                href="https://farmstandlisting.com/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </article>
 
           {/* Tikkit */}
-          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/5 transform transition duration-300 hover:scale-105 hover:shadow-3xl">
-            <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-5xl mb-3">🎫</div>
-                <div className="text-white font-bold text-2xl">Tikkit</div>
-                <div className="text-blue-100 text-sm">Support Desk</div>
+                <div className="text-3xl mb-1">🎫</div>
+                <div className="text-white font-bold text-sm">Tikkit</div>
               </div>
             </div>
-            <div className="p-8 flex flex-col gap-4">
-              <header>
-                <h3 className="text-xl font-semibold tracking-tight mb-3">Tikkit</h3>
-                <p className="text-gray-300 text-base leading-relaxed">A modern support desk and ticketing system designed to streamline customer service operations and improve response times.</p>
-              </header>
-              <div className="mt-auto">
-                <a 
-                  href="https://tikkitdesk.com/" 
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 rounded"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
-                </a>
-              </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">Tikkit</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">Modern support desk and ticketing system.</p>
+              <a 
+                href="https://tikkitdesk.com/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </article>
 
           {/* Frameriq */}
-          <article className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/5 transform transition duration-300 hover:scale-105 hover:shadow-3xl">
-            <div className="w-full h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-5xl mb-3">🖼️</div>
-                <div className="text-white font-bold text-2xl">Frameriq</div>
-                <div className="text-teal-100 text-sm">Frame Generator</div>
+                <div className="text-3xl mb-1">🖼️</div>
+                <div className="text-white font-bold text-sm">Frameriq</div>
               </div>
             </div>
-            <div className="p-8 flex flex-col gap-4">
-              <header>
-                <h3 className="text-xl font-semibold tracking-tight mb-3">Frameriq</h3>
-                <p className="text-gray-300 text-base leading-relaxed">An innovative platform for creating and customizing frames with advanced design tools and seamless user experience.</p>
-              </header>
-              <div className="mt-auto">
-                <a 
-                  href="https://frameriq.com/" 
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white font-medium transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 rounded"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                  <ArrowUpRight className="w-4 h-4 stroke-[2]" />
-                </a>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">Frameriq</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">Innovative platform for creating and customizing frames.</p>
+              <a 
+                href="https://frameriq.com/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+          </article>
+
+          {/* FridgeChef */}
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-3xl mb-1">👨‍🍳</div>
+                <div className="text-white font-bold text-sm">FridgeChef</div>
               </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">FridgeChef</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">Intelligent recipe generator based on available ingredients.</p>
+              <a 
+                href="https://app--fridge-chef-d6b7b34d.base44.app/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+          </article>
+
+
+
+          {/* Genimotion */}
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-3xl mb-1">🎬</div>
+                <div className="text-white font-bold text-sm">Genimotion</div>
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">Genimotion</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">AI-powered motion graphics and animations.</p>
+              <a 
+                href="https://genimotion.dev/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+          </article>
+
+          {/* SwiftApply */}
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-3xl mb-1">⚡</div>
+                <div className="text-white font-bold text-sm">SwiftApply</div>
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">SwiftApply</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">Streamlined job application platform.</p>
+              <a 
+                href="https://swiftapply.app/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
+          </article>
+
+          {/* WillTheyHireMe */}
+          <article className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+            <div className="w-full h-32 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-3xl mb-1">🔮</div>
+                <div className="text-white font-bold text-sm">WillTheyHireMe</div>
+              </div>
+            </div>
+            <div className="p-4">
+              <h3 className="text-sm font-semibold mb-2 text-gray-900">WillTheyHireMe</h3>
+              <p className="text-gray-600 text-xs leading-relaxed mb-3">AI-powered hiring prediction platform.</p>
+              <a 
+                href="https://willtheyhireme.com/" 
+                className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </article>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full px-6 max-w-4xl mx-auto mt-24 mb-12 text-center text-sm text-gray-400 fade-in opacity-0">
+      <footer className="w-full px-6 max-w-4xl mx-auto mt-16 mb-8 text-center text-xs text-gray-500 fade-in opacity-0">
         © {new Date().getFullYear()} Christopher Santangelo. All rights reserved.
       </footer>
     </div>
