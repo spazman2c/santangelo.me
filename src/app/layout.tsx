@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Christopher Santangelo - Full Stack Developer',
-  description: 'Full Stack Developer specializing in React, Next.js, and modern web technologies.',
+  title: 'Christopher Santangelo — Builder & Technical Support Engineer',
+  description: 'Toronto-based builder shipping a small portfolio of web products — Produl, Browser Grab, Clearvew, Cal Budget, Simmerly, Conjoin, and more.',
   icons: {
     icon: '/favicon.png',
   },
