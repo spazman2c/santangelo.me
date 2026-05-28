@@ -2,23 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-  }
+:root {
+  --background: #ffffff;
+  --foreground: #1c212b;
+  --primary: #1c212b;
+  --secondary: #677084;
+  --muted-foreground: #677084;
+  --border: #e6e8ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 @layer utilities {
-  .font-inter {
-    font-family: 'Inter', sans-serif;
+  .site-container {
+    @apply mx-auto w-full max-w-[70.9rem] px-5 py-0 sm:px-7;
   }
-  
-  .bg-grid-pattern {
-    background-image: radial-gradient(circle, #333 1px, transparent 1px);
-    background-size: 20px 20px;
+
+  .text-primary {
+    color: var(--primary);
   }
-} 
+
+  .text-secondary,
+  .text-muted-foreground {
+    color: var(--secondary);
+  }
+
+  .border-border {
+    border-color: var(--border);
+  }
+
+  .bg-border {
+    background-color: var(--border);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+}

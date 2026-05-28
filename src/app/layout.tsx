@@ -5,11 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Christopher Santangelo — Builder & Technical Support Engineer',
-  description: 'Toronto-based builder shipping a small portfolio of web products — Produl, Browser Grab, Clearvew, Cal Budget, Simmerly, Conjoin, and more.',
-  icons: {
-    icon: '/favicon.png',
-  },
+  title: 'Christopher Santangelo - Technical Support Engineer',
+  description:
+    'Portfolio and resume for Christopher Santangelo, a technical support engineer working across SaaS, IAM, cloud, endpoint, VoIP, documentation, automation, and product builds.',
 }
 
 export default function RootLayout({
@@ -19,10 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
-} 
+}
